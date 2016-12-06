@@ -51,7 +51,8 @@ def main():
                          name = 'Free Memory (B)',)])
 
     layout = Layout(autosize = True,
-                    xaxis = XAxis(title = 'Time (s)'),
+                    xaxis = XAxis(title = 'Time (s)',
+                                  dtick = 600,),
                     yaxis = YAxis(title = 'Free memory (Bytes)',
                                   range = [0,128000]))
 
@@ -65,9 +66,11 @@ def main():
                          name = 'Idle CPU (%),')])
 
     layout = Layout(autosize = True,
-                    xaxis = XAxis(title = 'Time (s)'),
+                    xaxis = XAxis(title = 'Time (s)',
+                                  dtick = 600,),
                     yaxis = YAxis(title = 'Idle CPU (%)',
-                                  range = [0,100]))
+                                  range = [0,100],
+                                  ticksuffix = '%',))
 
     fig = Figure(data=data, layout=layout)
     outfile = sanitized_dir + 'cpu.png'

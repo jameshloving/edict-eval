@@ -68,7 +68,8 @@ def main():
                          name = 'Total',)])
 
     layout = Layout(autosize = True,
-                    xaxis = XAxis(title = 'Time (s)'),
+                    xaxis = XAxis(title = 'Time (s)',
+                                  dtick = 600),
                     yaxis = YAxis(title = 'Throughput (MBits/s)',
                                   range = [0,1000]))
 
