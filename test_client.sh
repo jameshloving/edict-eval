@@ -20,7 +20,7 @@ then
     exit
 fi
 
-TEST_DURATION=5
+TEST_DURATION=3600
 TEST_FREQ=1
 
 # check time offset
@@ -61,15 +61,23 @@ END_TIME=$((END_TIME + TEST_DURATION - 1))
 CURR_TIME=`date +%s`
 while [ $CURR_TIME -lt $END_TIME ]
 do
-    if ps -p $NMAP_PID > /dev/null
+    if ([ -n "$3" ] && [ $3 == "--portscan" ])
     then
-        :
-    else
-        nmap -T5 -p- 192.168.0.0/16 &
-        NMAP_PID=$!
+        if ps -p $NMAP_PID > /dev/null
+        then
+            :
+        else
+            nmap -T5 -p- 192.168.0.0/16 &
+            NMAP_PID=$!
+        fi
     fi
     CURR_TIME=`date +%s`
-    sleep 1    
+    TIME_REMAINING=`echo $END_TIME-$CURR_TIME|bc`
+    if [ `echo $TIME_REMAINING%60|bc` -eq 0 ]
+    then
+        echo "`echo $TIME_REMAINING/60|bc` minutes remaining"
+    fi
+    sleep 1
 done
 
 # finish test and collect garbage
@@ -86,3 +94,9 @@ CLIENT_TIME=`date +%s`
 ((OFFSET_TIME = $SERVER_TIME - $CLIENT_TIME))
 echo ""
 echo "[`date +%s`]: Current server time = $SERVER_TIME (difference = $OFFSET_TIME)"
+
+# graph results
+echo ""
+echo "Please reconnect the router to the Internet and run:"
+echo "python graph_iperf.py $1"
+echo "python graph_vmstat.py $1"

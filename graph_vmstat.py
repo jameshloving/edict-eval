@@ -14,15 +14,9 @@ from plotly.graph_objs import *
 def clargs():
     parser = argparse.ArgumentParser()
     
-    parser.add_argument('infile',
+    parser.add_argument('dir',
                         type = str,
-                        help = 'The input file (from iperf).')
-    parser.add_argument('outmem',
-                        type = str,
-                        help = 'The output file (for the graph).')
-    parser.add_argument('outcpu',
-                        type = str,
-                        help = 'The output file (for the graph).')
+                        help = 'The directory to read from and write to.')
 
     return parser.parse_args()
 
@@ -31,10 +25,16 @@ def clargs():
 def main():
     args = clargs()
 
+    if (args.dir[-1] == '/'):
+        sanitized_dir = args.dir
+    else:
+        sanitized_dir = args.dir + '/'
+
     y_mem = []
     y_cpu = []
 
-    with open(args.infile) as f:
+    infile = sanitized_dir + 'vmstat.txt'
+    with open(infile) as f:
         lines = f.readlines()
 
     for i in range(int(len(lines)/4)):
@@ -56,7 +56,8 @@ def main():
                                   range = [0,128000]))
 
     fig = Figure(data=data, layout=layout)
-    py.image.save_as(fig, filename=(args.outmem))
+    outfile = sanitized_dir + 'mem.png'
+    py.image.save_as(fig, filename=outfile)
 
     data = Data([Scatter(x = x,
                          y = y_cpu,
@@ -69,7 +70,8 @@ def main():
                                   range = [0,100]))
 
     fig = Figure(data=data, layout=layout)
-    py.image.save_as(fig, filename=(args.outcpu))
+    outfile = sanitized_dir + 'cpu.png'
+    py.image.save_as(fig, filename=outfile)
 
     return
 
