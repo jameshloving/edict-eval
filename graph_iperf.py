@@ -14,9 +14,12 @@ from plotly.graph_objs import *
 def clargs():
     parser = argparse.ArgumentParser()
     
-    parser.add_argument('infile',
+    parser.add_argument('in4',
                         type = str,
-                        help = 'The input file (from iperf).')
+                        help = 'The IPv4 input file (from iperf).')
+    parser.add_argument('in6',
+                        type = str,
+                        help = 'The IPv6 input file (from iperf).')
     parser.add_argument('outfile',
                         type = str,
                         help = 'The output file (for the graph).')
@@ -28,21 +31,40 @@ def clargs():
 def main():
     args = clargs()
 
-    y = []
+    y4 = []
+    y6 = []
 
-    with open(args.infile) as f:
+    with open(args.in4) as f:
         for line in f:
             if line.split()[0] == "[SUM]":
-                y.append(int(line.split()[-2]))
+                y4.append(int(line.split()[-2]))
 
-    x = list(range(1, len(y)+1))     
+    with open(args.in6) as f:
+        for line in f:
+            if line.split()[0] == "[SUM]":
+                y6.append(int(line.split()[-2]))
+
+    x = list(range(1, len(y4)+1))     
+
+    y_total = [a + b for a, b in zip(y4, y6)]
 
     py.sign_in('jameshloving', 'gtcGiWGJpgnSKIBgXFqj')
 
     data = Data([Scatter(x = x,
-                         y = y,
+                         y = y4,
                          line = Line(),
-                         name = 'Throughput',)])
+                         mode = 'lines',
+                         name = 'IPv4',),
+                 Scatter(x = x, 
+                         y = y6,
+                         line = Line(),
+                         mode = 'lines',
+                         name = 'IPv6',),
+                 Scatter(x = x, 
+                         y = y_total,
+                         line = Line(),
+                         mode = 'lines',
+                         name = 'Total',)])
 
     layout = Layout(autosize = True,
                     xaxis = XAxis(title = 'Time (s)'),
