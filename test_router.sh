@@ -11,6 +11,10 @@
 #                Note: This script is NOT designed to be run by the user. It
 #                is executed via test_client.sh.
 #
+#                Note: This script requires `vmstat` be installed on the
+#                router. To install:
+#                   `./prep_router.sh`
+#
 ################################################################################
 
 # get performance metrics once per $2 seconds for $1 seconds
