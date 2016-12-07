@@ -8,8 +8,10 @@
 #                measured by its impact on CPU utilization, memory utilization,
 #                and network throughput.
 #
+#                Note: run `./prep_router.sh` prior to FIRST run.
+#
 #                Note: run `iperf -s -w 16m` on SERVER machine prior to
-#                execution.
+#                ALL runs.
 #
 ################################################################################
 
