@@ -23,7 +23,7 @@ then
 fi
 
 # check if directory exists
-if [ -d $1 ]
+if [ ! -d $1 ]
 then
     echo "Directory $1 did not exist. Creating..."
     mkdir $1
