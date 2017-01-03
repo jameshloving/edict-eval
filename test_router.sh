@@ -18,9 +18,6 @@
 ################################################################################
 
 # get performance metrics once per $2 seconds for $1 seconds
-for i in `seq 1 $1`
-do
-    date +%s
-    vmstat
-    sleep $2
-done
+date +%s
+top|head -n 4
+vmstat $2 $1 --unit K --timestamp

@@ -11,6 +11,8 @@ import argparse
 import plotly.plotly as py
 from plotly.graph_objs import *
 
+from IPython import embed
+
 def clargs():
     parser = argparse.ArgumentParser()
     
@@ -37,9 +39,12 @@ def main():
     with open(infile) as f:
         lines = f.readlines()
 
-    for i in range(int(len(lines)/4)):
-        y_mem.append(lines[i*4 + 3].split()[3])
-        y_cpu.append(lines[i*4 + 3].split()[-3])
+    #total_mem = int(lines[4].split()[3])
+
+    for l in lines[7:]:
+        y_mem.append(int(float(l.split()[3])))
+        #y_mem.append(total_mem - int(l.split()[3]))
+        y_cpu.append(100 - int(float(l.split()[-5])))
 
     x = list(range(1, len(y_mem)+1))     
 
@@ -48,12 +53,13 @@ def main():
     data = Data([Scatter(x = x,
                          y = y_mem,
                          line = Line(),
-                         name = 'Free Memory (B)',)])
+                         name = 'Free Memory (KB)',)])
+                         #name = 'Memory Utilization (KB)',)])
 
     layout = Layout(autosize = True,
                     xaxis = XAxis(title = 'Time (s)',
                                   dtick = 600,),
-                    yaxis = YAxis(title = 'Free memory (Bytes)',
+                    yaxis = YAxis(title = 'Free Memory (KB)',
                                   range = [0,128000]))
 
     fig = Figure(data=data, layout=layout)
@@ -63,12 +69,12 @@ def main():
     data = Data([Scatter(x = x,
                          y = y_cpu,
                          line = Line(),
-                         name = 'Idle CPU (%),')])
+                         name = 'CPU Utilization (%),')])
 
     layout = Layout(autosize = True,
                     xaxis = XAxis(title = 'Time (s)',
                                   dtick = 600,),
-                    yaxis = YAxis(title = 'Idle CPU (%)',
+                    yaxis = YAxis(title = 'CPU Utilization (%)',
                                   range = [0,100],
                                   ticksuffix = '%',))
 

@@ -13,5 +13,7 @@
 #
 ################################################################################
 
-ssh -i ~/.ssh/id_edict root@192.168.1.1 'wget https://downloads.lede-project.org/snapshots/packages/mipsel_74kc/packages/procps-ng-vmstat_3.3.11-3_mipsel_74kc.ipk'
-ssh -i ~/.ssh/id_edict root@192.168.1.1 'opkg install procps-ng-vmstat_3.3.11-3_mipsel_74kc.ipk'
+PKG_VMSTAT='procps-ng-vmstat_3.3.11-3_mipsel_74kc.ipk'
+
+ssh -i ~/.ssh/id_edict root@192.168.1.1 "wget https://downloads.lede-project.org/snapshots/packages/mipsel_74kc/packages/$PKG_VMSTAT"
+ssh -i ~/.ssh/id_edict root@192.168.1.1 "opkg install $PKG_VMSTAT"

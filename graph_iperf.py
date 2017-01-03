@@ -37,13 +37,13 @@ def main():
     with open(infile) as f:
         for line in f:
             if line.split()[0] == "[SUM]":
-                y4.append(int(line.split()[-2]))
+                y4.append(int(float(line.split()[-2])))
 
     infile = sanitized_dir + 'iperf6.txt'
     with open(infile) as f:
         for line in f:
             if line.split()[0] == "[SUM]":
-                y6.append(int(line.split()[-2]))
+                y6.append(int(float(line.split()[-2])))
 
     x = list(range(1, len(y4)+1))     
 
