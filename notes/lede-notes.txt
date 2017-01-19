@@ -1,0 +1,34 @@
+git clone git://git.lede-project.org/source.git
+cd source
+git pull
+./scripts feeds update -a
+./scripts feeds install -a
+make menuconfig
+    Target System -> Broadcom BCM47xx(53xx (MIPS)
+    Subtarget -> MIPS 74K
+    Target Profile -> Asus RT-N66U
+    Exit
+    Save? Yes
+make defconfig
+make menuconfig
+    languages
+        node -> node
+    libraries
+        libnetfilter-log
+    network
+        firewall
+            ip6tables
+            iptables
+                iptables-mod-condition
+                iptables-mod-conntrack
+                iptables-mod-nflog
+    utilities
+        procps-ng - select, <enter>, unselect all but vmstat
+    exit
+    save? yes
+scripts/diffconfig.sh > edict.config
+make kernel_menuconfig CONFIG_MIPS_FPU_EMULATOR=y
+    Kernel Type -> MIPS FPU Emulator
+    exit
+    save? yes
+echo 'CONFIG_MIPS_FPU_EMULATOR=y' >> edict.config
