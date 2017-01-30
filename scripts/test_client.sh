@@ -60,7 +60,8 @@ ssh -i ~/.ssh/id_edict root@$ROUTER_IP "./test_router.sh $TEST_DURATION $TEST_FR
 # start throughput test
 echo ""
 echo "[`date +%s`]: Starting throughput logging (IPv6)"
-iperf3 -c $2 -b 50M -t $TEST_DURATION -i $TEST_FREQ > $1/iperf6.txt &
+iperf3 -c $2 -P 10 -t $TEST_DURATION -i $TEST_FREQ > $1/iperf6.txt &
+#iperf3 -c $2 -b 50M -t $TEST_DURATION -i $TEST_FREQ > $1/iperf6.txt &
 IPERF_PID=$!
 
 # run test
@@ -87,7 +88,8 @@ do
     then
         :
     else
-        iperf3 -c $2 -b 50M -t $TEST_DURATION -i $TEST_FREQ > $1/iperf6.txt &
+        iperf3 -c $2 -P 10 -t $TEST_DURATION -i $TEST_FREQ > $1/iperf6.txt &
+        #iperf3 -c $2 -b 50M -t $TEST_DURATION -i $TEST_FREQ > $1/iperf6.txt &
         IPERF_PID=$!
     fi
     # update timing    
