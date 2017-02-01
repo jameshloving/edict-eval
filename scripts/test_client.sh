@@ -14,6 +14,8 @@
 #
 ################################################################################
 
+ROUTER_IP=192.168.1.1
+
 # check for correct number of arguments
 if [ -z "$2" ]
 then
@@ -28,11 +30,11 @@ then
     mkdir $1
 fi
 
-TEST_DURATION=3600
+TEST_DURATION=7200
 TEST_FREQ=1
 
 # check time offset
-SERVER_TIME=`ssh -i ~/.ssh/id_edict root@192.168.1.1 'date +%s'`
+SERVER_TIME=`ssh -i ~/.ssh/id_edict root@$ROUTER_IP 'date +%s'`
 CLIENT_TIME=`date +%s`
 ((OFFSET_TIME = $SERVER_TIME - $CLIENT_TIME))
 echo "[`date +%s`]: Current server time = $SERVER_TIME (difference = $OFFSET_TIME)"
@@ -51,14 +53,15 @@ fi
 # start CPU/memory utilization logging on router
 echo ""
 echo "[`date +%s`]: Pushing slave script to router for utilization test"
-scp -i ~/.ssh/id_edict test_router.sh root@192.168.1.1:~/
+scp -i ~/.ssh/id_edict test_router.sh root@$ROUTER_IP:~/
 echo "[`date +%s`]: Starting CPU and memory utilization logging"
-ssh -i ~/.ssh/id_edict root@192.168.1.1 "./test_router.sh $TEST_DURATION $TEST_FREQ > test.out" &
+ssh -i ~/.ssh/id_edict root@$ROUTER_IP "./test_router.sh $TEST_DURATION $TEST_FREQ > test.out" &
 
 # start throughput test
 echo ""
 echo "[`date +%s`]: Starting throughput logging (IPv6)"
-iperf3 -c $2 -b 50M -t $TEST_DURATION -i $TEST_FREQ > $1/iperf6.txt &
+iperf3 -c $2 -P 10 -t $TEST_DURATION -i $TEST_FREQ > $1/iperf6.txt &
+#iperf3 -c $2 -b 50M -t $TEST_DURATION -i $TEST_FREQ > $1/iperf6.txt &
 IPERF_PID=$!
 
 # run test
@@ -85,7 +88,8 @@ do
     then
         :
     else
-        iperf3 -c $2 -b 50M -t $TEST_DURATION -i $TEST_FREQ > $1/iperf6.txt &
+        iperf3 -c $2 -P 10 -t $TEST_DURATION -i $TEST_FREQ > $1/iperf6.txt &
+        #iperf3 -c $2 -b 50M -t $TEST_DURATION -i $TEST_FREQ > $1/iperf6.txt &
         IPERF_PID=$!
     fi
     # update timing    
@@ -103,11 +107,11 @@ echo ""
 echo "[`date +%s`]: Test complete"
 pkill nmap
 echo "[`date +%s`]: Fetching results from router"
-scp -i ~/.ssh/id_edict root@192.168.1.1:~/test.out $1/vmstat.txt
-ssh -i ~/.ssh/id_edict root@192.168.1.1 'rm ~/test.out'
+scp -i ~/.ssh/id_edict root@$ROUTER_IP:~/test.out $1/vmstat.txt
+ssh -i ~/.ssh/id_edict root@$ROUTER_IP 'rm ~/test.out'
 
 # check time offset again
-SERVER_TIME=`ssh -i ~/.ssh/id_edict root@192.168.1.1 'date +%s'`
+SERVER_TIME=`ssh -i ~/.ssh/id_edict root@$ROUTER_IP 'date +%s'`
 CLIENT_TIME=`date +%s`
 ((OFFSET_TIME = $SERVER_TIME - $CLIENT_TIME))
 echo ""
