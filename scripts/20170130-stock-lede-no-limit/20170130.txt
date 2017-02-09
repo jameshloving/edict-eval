@@ -1,0 +1,1930 @@
+***Starting round 1***
+Disabling EDICT
+Directory 20170130-stock-lede-no-limit/+edict-off-noScan-wired1 did not exist. Creating...
+[1485819926]: Current server time = 1485819926 (difference = 0)
+
+[1485819926]: Writing results to directory 20170130-stock-lede-no-limit/+edict-off-noScan-wired1
+
+[1485819926]: Pushing slave script to router for utilization test
+[1485819927]: Starting CPU and memory utilization logging
+
+[1485819927]: Starting throughput logging (IPv6)
+
+[1485819927]: Running test for 7200 seconds
+119 minutes remaining
+118 minutes remaining
+117 minutes remaining
+116 minutes remaining
+115 minutes remaining
+114 minutes remaining
+113 minutes remaining
+112 minutes remaining
+111 minutes remaining
+110 minutes remaining
+108 minutes remaining
+107 minutes remaining
+106 minutes remaining
+105 minutes remaining
+104 minutes remaining
+103 minutes remaining
+102 minutes remaining
+101 minutes remaining
+100 minutes remaining
+99 minutes remaining
+98 minutes remaining
+97 minutes remaining
+96 minutes remaining
+95 minutes remaining
+94 minutes remaining
+93 minutes remaining
+92 minutes remaining
+91 minutes remaining
+89 minutes remaining
+88 minutes remaining
+87 minutes remaining
+85 minutes remaining
+84 minutes remaining
+83 minutes remaining
+82 minutes remaining
+81 minutes remaining
+80 minutes remaining
+79 minutes remaining
+78 minutes remaining
+77 minutes remaining
+76 minutes remaining
+75 minutes remaining
+74 minutes remaining
+73 minutes remaining
+72 minutes remaining
+70 minutes remaining
+69 minutes remaining
+68 minutes remaining
+67 minutes remaining
+66 minutes remaining
+65 minutes remaining
+64 minutes remaining
+63 minutes remaining
+62 minutes remaining
+61 minutes remaining
+60 minutes remaining
+59 minutes remaining
+58 minutes remaining
+57 minutes remaining
+56 minutes remaining
+55 minutes remaining
+53 minutes remaining
+52 minutes remaining
+51 minutes remaining
+50 minutes remaining
+49 minutes remaining
+48 minutes remaining
+47 minutes remaining
+46 minutes remaining
+45 minutes remaining
+44 minutes remaining
+43 minutes remaining
+42 minutes remaining
+41 minutes remaining
+40 minutes remaining
+39 minutes remaining
+38 minutes remaining
+37 minutes remaining
+36 minutes remaining
+35 minutes remaining
+34 minutes remaining
+33 minutes remaining
+32 minutes remaining
+31 minutes remaining
+30 minutes remaining
+29 minutes remaining
+28 minutes remaining
+27 minutes remaining
+26 minutes remaining
+25 minutes remaining
+24 minutes remaining
+23 minutes remaining
+22 minutes remaining
+21 minutes remaining
+20 minutes remaining
+19 minutes remaining
+18 minutes remaining
+17 minutes remaining
+15 minutes remaining
+14 minutes remaining
+13 minutes remaining
+12 minutes remaining
+11 minutes remaining
+10 minutes remaining
+9 minutes remaining
+8 minutes remaining
+7 minutes remaining
+6 minutes remaining
+5 minutes remaining
+3 minutes remaining
+2 minutes remaining
+1 minutes remaining
+
+[1485827128]: Test complete
+[1485827128]: Fetching results from router
+
+[1485827129]: Current server time = 1485827129 (difference = 0)
+
+Please reconnect the router to the Internet and run:
+python graph_iperf.py 20170130-stock-lede-no-limit/+edict-off-noScan-wired1
+python graph_vmstat.py 20170130-stock-lede-no-limit/+edict-off-noScan-wired1
+Directory 20170130-stock-lede-no-limit/+edict-off-yesScan-wired1 did not exist. Creating...
+[1485827135]: Current server time = 1485827135 (difference = 0)
+
+[1485827135]: Writing results to directory 20170130-stock-lede-no-limit/+edict-off-yesScan-wired1
+[1485827135]: Starting port scan
+
+[1485827135]: Pushing slave script to router for utilization test
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2017-01-31 01:45 UTC
+[1485827135]: Starting CPU and memory utilization logging
+
+[1485827135]: Starting throughput logging (IPv6)
+
+[1485827135]: Running test for 7200 seconds
+119 minutes remaining
+118 minutes remaining
+117 minutes remaining
+116 minutes remaining
+115 minutes remaining
+114 minutes remaining
+113 minutes remaining
+112 minutes remaining
+111 minutes remaining
+110 minutes remaining
+109 minutes remaining
+108 minutes remaining
+107 minutes remaining
+106 minutes remaining
+Warning: 192.168.0.141 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.1 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.138 giving up on port because retransmission cap hit (2).
+Nmap scan report for 192.168.0.1
+Host is up (0.00075s latency).
+Not shown: 65531 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+23/tcp open  telnet
+53/tcp open  domain
+80/tcp open  http
+
+Nmap scan report for 192.168.0.138
+Host is up (0.0011s latency).
+Not shown: 65534 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for 192.168.0.141
+Host is up (0.00056s latency).
+Skipping host 192.168.0.141 due to host timeout
+104 minutes remaining
+102 minutes remaining
+101 minutes remaining
+100 minutes remaining
+99 minutes remaining
+98 minutes remaining
+97 minutes remaining
+96 minutes remaining
+95 minutes remaining
+94 minutes remaining
+93 minutes remaining
+92 minutes remaining
+91 minutes remaining
+90 minutes remaining
+Warning: 192.168.1.1 giving up on port because retransmission cap hit (2).
+Nmap scan report for lede.lan (192.168.1.1)
+Host is up (0.00056s latency).
+Skipping host lede.lan (192.168.1.1) due to host timeout
+89 minutes remaining
+88 minutes remaining
+87 minutes remaining
+86 minutes remaining
+85 minutes remaining
+84 minutes remaining
+83 minutes remaining
+82 minutes remaining
+81 minutes remaining
+80 minutes remaining
+79 minutes remaining
+78 minutes remaining
+77 minutes remaining
+76 minutes remaining
+75 minutes remaining
+74 minutes remaining
+73 minutes remaining
+72 minutes remaining
+70 minutes remaining
+69 minutes remaining
+67 minutes remaining
+66 minutes remaining
+65 minutes remaining
+64 minutes remaining
+63 minutes remaining
+62 minutes remaining
+61 minutes remaining
+60 minutes remaining
+59 minutes remaining
+58 minutes remaining
+57 minutes remaining
+56 minutes remaining
+55 minutes remaining
+54 minutes remaining
+53 minutes remaining
+52 minutes remaining
+51 minutes remaining
+50 minutes remaining
+48 minutes remaining
+47 minutes remaining
+46 minutes remaining
+45 minutes remaining
+44 minutes remaining
+43 minutes remaining
+42 minutes remaining
+41 minutes remaining
+40 minutes remaining
+39 minutes remaining
+38 minutes remaining
+37 minutes remaining
+36 minutes remaining
+35 minutes remaining
+33 minutes remaining
+32 minutes remaining
+31 minutes remaining
+30 minutes remaining
+28 minutes remaining
+27 minutes remaining
+26 minutes remaining
+25 minutes remaining
+Warning: 192.168.1.111 giving up on port because retransmission cap hit (2).
+Nmap scan report for odroid64.lan (192.168.1.111)
+Host is up (0.000020s latency).
+Not shown: 65534 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap done: 65536 IP addresses (5 hosts up) scanned in 5750.29 seconds
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2017-01-31 03:21 UTC
+24 minutes remaining
+23 minutes remaining
+21 minutes remaining
+20 minutes remaining
+19 minutes remaining
+17 minutes remaining
+15 minutes remaining
+14 minutes remaining
+13 minutes remaining
+12 minutes remaining
+11 minutes remaining
+10 minutes remaining
+Warning: 192.168.0.141 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.138 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.1 giving up on port because retransmission cap hit (2).
+Nmap scan report for 192.168.0.1
+Host is up (0.00078s latency).
+Not shown: 65531 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+23/tcp open  telnet
+53/tcp open  domain
+80/tcp open  http
+
+Nmap scan report for 192.168.0.138
+Host is up (0.0012s latency).
+Not shown: 65534 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for 192.168.0.141
+Host is up (0.00057s latency).
+Skipping host 192.168.0.141 due to host timeout
+9 minutes remaining
+8 minutes remaining
+7 minutes remaining
+6 minutes remaining
+4 minutes remaining
+3 minutes remaining
+2 minutes remaining
+1 minutes remaining
+0 minutes remaining
+
+[1485834335]: Test complete
+[1485834335]: Fetching results from router
+
+[1485834336]: Current server time = 1485834336 (difference = 0)
+
+Please reconnect the router to the Internet and run:
+python graph_iperf.py 20170130-stock-lede-no-limit/+edict-off-yesScan-wired1
+python graph_vmstat.py 20170130-stock-lede-no-limit/+edict-off-yesScan-wired1
+Enabling EDICT (no UI)
+Directory 20170130-stock-lede-no-limit/+edict-on-noUI-noScan-wired1 did not exist. Creating...
+[1485834343]: Current server time = 1485834343 (difference = 0)
+
+[1485834343]: Writing results to directory 20170130-stock-lede-no-limit/+edict-on-noUI-noScan-wired1
+
+[1485834343]: Pushing slave script to router for utilization test
+[1485834343]: Starting CPU and memory utilization logging
+
+[1485834343]: Starting throughput logging (IPv6)
+
+[1485834343]: Running test for 7200 seconds
+119 minutes remaining
+118 minutes remaining
+117 minutes remaining
+116 minutes remaining
+115 minutes remaining
+114 minutes remaining
+113 minutes remaining
+112 minutes remaining
+111 minutes remaining
+110 minutes remaining
+109 minutes remaining
+108 minutes remaining
+107 minutes remaining
+106 minutes remaining
+105 minutes remaining
+104 minutes remaining
+103 minutes remaining
+102 minutes remaining
+101 minutes remaining
+100 minutes remaining
+99 minutes remaining
+98 minutes remaining
+97 minutes remaining
+96 minutes remaining
+95 minutes remaining
+94 minutes remaining
+93 minutes remaining
+92 minutes remaining
+91 minutes remaining
+90 minutes remaining
+89 minutes remaining
+88 minutes remaining
+87 minutes remaining
+86 minutes remaining
+85 minutes remaining
+84 minutes remaining
+83 minutes remaining
+82 minutes remaining
+80 minutes remaining
+79 minutes remaining
+78 minutes remaining
+77 minutes remaining
+76 minutes remaining
+75 minutes remaining
+74 minutes remaining
+73 minutes remaining
+72 minutes remaining
+71 minutes remaining
+70 minutes remaining
+69 minutes remaining
+68 minutes remaining
+67 minutes remaining
+66 minutes remaining
+64 minutes remaining
+63 minutes remaining
+62 minutes remaining
+61 minutes remaining
+59 minutes remaining
+58 minutes remaining
+57 minutes remaining
+55 minutes remaining
+54 minutes remaining
+53 minutes remaining
+52 minutes remaining
+51 minutes remaining
+50 minutes remaining
+49 minutes remaining
+48 minutes remaining
+47 minutes remaining
+46 minutes remaining
+45 minutes remaining
+44 minutes remaining
+43 minutes remaining
+42 minutes remaining
+41 minutes remaining
+40 minutes remaining
+39 minutes remaining
+38 minutes remaining
+37 minutes remaining
+36 minutes remaining
+35 minutes remaining
+34 minutes remaining
+33 minutes remaining
+32 minutes remaining
+31 minutes remaining
+30 minutes remaining
+28 minutes remaining
+27 minutes remaining
+26 minutes remaining
+25 minutes remaining
+24 minutes remaining
+23 minutes remaining
+22 minutes remaining
+20 minutes remaining
+19 minutes remaining
+18 minutes remaining
+17 minutes remaining
+16 minutes remaining
+15 minutes remaining
+14 minutes remaining
+12 minutes remaining
+10 minutes remaining
+8 minutes remaining
+7 minutes remaining
+6 minutes remaining
+5 minutes remaining
+4 minutes remaining
+3 minutes remaining
+2 minutes remaining
+1 minutes remaining
+0 minutes remaining
+
+[1485841543]: Test complete
+[1485841543]: Fetching results from router
+
+[1485841545]: Current server time = 1485841545 (difference = 0)
+
+Please reconnect the router to the Internet and run:
+python graph_iperf.py 20170130-stock-lede-no-limit/+edict-on-noUI-noScan-wired1
+python graph_vmstat.py 20170130-stock-lede-no-limit/+edict-on-noUI-noScan-wired1
+Directory 20170130-stock-lede-no-limit/+edict-on-noUI-yesScan-wired1 did not exist. Creating...
+[1485841550]: Current server time = 1485841550 (difference = 0)
+
+[1485841550]: Writing results to directory 20170130-stock-lede-no-limit/+edict-on-noUI-yesScan-wired1
+[1485841551]: Starting port scan
+
+[1485841551]: Pushing slave script to router for utilization test
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2017-01-31 05:45 UTC
+[1485841551]: Starting CPU and memory utilization logging
+
+[1485841551]: Starting throughput logging (IPv6)
+
+[1485841551]: Running test for 7200 seconds
+119 minutes remaining
+118 minutes remaining
+117 minutes remaining
+116 minutes remaining
+115 minutes remaining
+114 minutes remaining
+113 minutes remaining
+112 minutes remaining
+111 minutes remaining
+110 minutes remaining
+109 minutes remaining
+108 minutes remaining
+107 minutes remaining
+106 minutes remaining
+105 minutes remaining
+Warning: 192.168.0.141 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.1 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.138 giving up on port because retransmission cap hit (2).
+Nmap scan report for 192.168.0.1
+Host is up (0.00075s latency).
+Not shown: 65531 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+23/tcp open  telnet
+53/tcp open  domain
+80/tcp open  http
+
+Nmap scan report for 192.168.0.138
+Host is up (0.0011s latency).
+Not shown: 65534 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for 192.168.0.141
+Host is up (0.00056s latency).
+Skipping host 192.168.0.141 due to host timeout
+104 minutes remaining
+103 minutes remaining
+102 minutes remaining
+101 minutes remaining
+100 minutes remaining
+99 minutes remaining
+98 minutes remaining
+97 minutes remaining
+96 minutes remaining
+95 minutes remaining
+94 minutes remaining
+93 minutes remaining
+92 minutes remaining
+91 minutes remaining
+90 minutes remaining
+Warning: 192.168.1.1 giving up on port because retransmission cap hit (2).
+Nmap scan report for lede.lan (192.168.1.1)
+Host is up (0.00058s latency).
+Skipping host lede.lan (192.168.1.1) due to host timeout
+89 minutes remaining
+88 minutes remaining
+87 minutes remaining
+86 minutes remaining
+85 minutes remaining
+84 minutes remaining
+83 minutes remaining
+82 minutes remaining
+81 minutes remaining
+80 minutes remaining
+79 minutes remaining
+78 minutes remaining
+77 minutes remaining
+75 minutes remaining
+74 minutes remaining
+73 minutes remaining
+71 minutes remaining
+70 minutes remaining
+68 minutes remaining
+67 minutes remaining
+66 minutes remaining
+65 minutes remaining
+64 minutes remaining
+63 minutes remaining
+62 minutes remaining
+61 minutes remaining
+60 minutes remaining
+59 minutes remaining
+58 minutes remaining
+57 minutes remaining
+56 minutes remaining
+55 minutes remaining
+54 minutes remaining
+53 minutes remaining
+52 minutes remaining
+51 minutes remaining
+49 minutes remaining
+48 minutes remaining
+47 minutes remaining
+46 minutes remaining
+45 minutes remaining
+43 minutes remaining
+42 minutes remaining
+41 minutes remaining
+40 minutes remaining
+39 minutes remaining
+38 minutes remaining
+37 minutes remaining
+36 minutes remaining
+35 minutes remaining
+34 minutes remaining
+33 minutes remaining
+32 minutes remaining
+31 minutes remaining
+30 minutes remaining
+29 minutes remaining
+28 minutes remaining
+27 minutes remaining
+26 minutes remaining
+25 minutes remaining
+Warning: 192.168.1.111 giving up on port because retransmission cap hit (2).
+Nmap scan report for odroid64.lan (192.168.1.111)
+Host is up (0.000020s latency).
+Not shown: 65534 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap done: 65536 IP addresses (5 hosts up) scanned in 5756.19 seconds
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2017-01-31 07:21 UTC
+24 minutes remaining
+23 minutes remaining
+22 minutes remaining
+21 minutes remaining
+20 minutes remaining
+19 minutes remaining
+18 minutes remaining
+16 minutes remaining
+15 minutes remaining
+14 minutes remaining
+13 minutes remaining
+12 minutes remaining
+11 minutes remaining
+10 minutes remaining
+9 minutes remaining
+Warning: 192.168.0.141 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.1 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.138 giving up on port because retransmission cap hit (2).
+Nmap scan report for 192.168.0.1
+Host is up (0.00079s latency).
+Not shown: 65531 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+23/tcp open  telnet
+53/tcp open  domain
+80/tcp open  http
+
+Nmap scan report for 192.168.0.138
+Host is up (0.0011s latency).
+Not shown: 65534 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for 192.168.0.141
+Host is up (0.00056s latency).
+Skipping host 192.168.0.141 due to host timeout
+8 minutes remaining
+7 minutes remaining
+6 minutes remaining
+5 minutes remaining
+4 minutes remaining
+2 minutes remaining
+1 minutes remaining
+0 minutes remaining
+
+[1485848751]: Test complete
+[1485848751]: Fetching results from router
+
+[1485848752]: Current server time = 1485848752 (difference = 0)
+
+Please reconnect the router to the Internet and run:
+python graph_iperf.py 20170130-stock-lede-no-limit/+edict-on-noUI-yesScan-wired1
+python graph_vmstat.py 20170130-stock-lede-no-limit/+edict-on-noUI-yesScan-wired1
+Enabling EDICT UI
+Directory 20170130-stock-lede-no-limit/+edict-on-yesUI-noScan-wired1 did not exist. Creating...
+[1485848758]: Current server time = 1485848758 (difference = 0)
+
+[1485848758]: Writing results to directory 20170130-stock-lede-no-limit/+edict-on-yesUI-noScan-wired1
+
+[1485848758]: Pushing slave script to router for utilization test
+[1485848759]: Starting CPU and memory utilization logging
+
+[1485848759]: Starting throughput logging (IPv6)
+
+[1485848759]: Running test for 7200 seconds
+119 minutes remaining
+118 minutes remaining
+117 minutes remaining
+116 minutes remaining
+115 minutes remaining
+114 minutes remaining
+113 minutes remaining
+112 minutes remaining
+111 minutes remaining
+110 minutes remaining
+109 minutes remaining
+108 minutes remaining
+107 minutes remaining
+106 minutes remaining
+105 minutes remaining
+104 minutes remaining
+103 minutes remaining
+102 minutes remaining
+101 minutes remaining
+100 minutes remaining
+99 minutes remaining
+98 minutes remaining
+97 minutes remaining
+96 minutes remaining
+95 minutes remaining
+94 minutes remaining
+93 minutes remaining
+92 minutes remaining
+91 minutes remaining
+90 minutes remaining
+89 minutes remaining
+88 minutes remaining
+87 minutes remaining
+86 minutes remaining
+85 minutes remaining
+84 minutes remaining
+83 minutes remaining
+82 minutes remaining
+81 minutes remaining
+80 minutes remaining
+79 minutes remaining
+78 minutes remaining
+77 minutes remaining
+76 minutes remaining
+75 minutes remaining
+74 minutes remaining
+73 minutes remaining
+72 minutes remaining
+71 minutes remaining
+70 minutes remaining
+68 minutes remaining
+67 minutes remaining
+66 minutes remaining
+65 minutes remaining
+64 minutes remaining
+63 minutes remaining
+62 minutes remaining
+61 minutes remaining
+60 minutes remaining
+59 minutes remaining
+58 minutes remaining
+57 minutes remaining
+56 minutes remaining
+55 minutes remaining
+54 minutes remaining
+53 minutes remaining
+52 minutes remaining
+51 minutes remaining
+50 minutes remaining
+48 minutes remaining
+47 minutes remaining
+46 minutes remaining
+45 minutes remaining
+44 minutes remaining
+43 minutes remaining
+42 minutes remaining
+41 minutes remaining
+39 minutes remaining
+38 minutes remaining
+37 minutes remaining
+35 minutes remaining
+34 minutes remaining
+33 minutes remaining
+32 minutes remaining
+31 minutes remaining
+30 minutes remaining
+29 minutes remaining
+28 minutes remaining
+27 minutes remaining
+26 minutes remaining
+25 minutes remaining
+24 minutes remaining
+23 minutes remaining
+22 minutes remaining
+21 minutes remaining
+20 minutes remaining
+19 minutes remaining
+18 minutes remaining
+16 minutes remaining
+15 minutes remaining
+14 minutes remaining
+13 minutes remaining
+12 minutes remaining
+11 minutes remaining
+10 minutes remaining
+9 minutes remaining
+8 minutes remaining
+7 minutes remaining
+6 minutes remaining
+4 minutes remaining
+3 minutes remaining
+2 minutes remaining
+1 minutes remaining
+0 minutes remaining
+
+[1485855960]: Test complete
+[1485855960]: Fetching results from router
+
+[1485855961]: Current server time = 1485855961 (difference = 0)
+
+Please reconnect the router to the Internet and run:
+python graph_iperf.py 20170130-stock-lede-no-limit/+edict-on-yesUI-noScan-wired1
+python graph_vmstat.py 20170130-stock-lede-no-limit/+edict-on-yesUI-noScan-wired1
+Directory 20170130-stock-lede-no-limit/+edict-on-yesUI-yesScan-wired1 did not exist. Creating...
+[1485855967]: Current server time = 1485855966 (difference = -1)
+
+[1485855967]: Writing results to directory 20170130-stock-lede-no-limit/+edict-on-yesUI-yesScan-wired1
+[1485855967]: Starting port scan
+
+[1485855967]: Pushing slave script to router for utilization test
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2017-01-31 09:46 UTC
+[1485855967]: Starting CPU and memory utilization logging
+
+[1485855967]: Starting throughput logging (IPv6)
+
+[1485855967]: Running test for 7200 seconds
+119 minutes remaining
+118 minutes remaining
+117 minutes remaining
+116 minutes remaining
+115 minutes remaining
+114 minutes remaining
+113 minutes remaining
+112 minutes remaining
+111 minutes remaining
+109 minutes remaining
+108 minutes remaining
+107 minutes remaining
+106 minutes remaining
+105 minutes remaining
+Warning: 192.168.0.141 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.1 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.138 giving up on port because retransmission cap hit (2).
+Nmap scan report for 192.168.0.1
+Host is up (0.00073s latency).
+Not shown: 65531 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+23/tcp open  telnet
+53/tcp open  domain
+80/tcp open  http
+
+Nmap scan report for 192.168.0.138
+Host is up (0.0011s latency).
+Not shown: 65534 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for 192.168.0.141
+Host is up (0.00056s latency).
+Skipping host 192.168.0.141 due to host timeout
+104 minutes remaining
+103 minutes remaining
+102 minutes remaining
+101 minutes remaining
+100 minutes remaining
+99 minutes remaining
+98 minutes remaining
+97 minutes remaining
+96 minutes remaining
+95 minutes remaining
+94 minutes remaining
+93 minutes remaining
+92 minutes remaining
+91 minutes remaining
+90 minutes remaining
+Warning: 192.168.1.1 giving up on port because retransmission cap hit (2).
+Nmap scan report for lede.lan (192.168.1.1)
+Host is up (0.00057s latency).
+Skipping host lede.lan (192.168.1.1) due to host timeout
+89 minutes remaining
+88 minutes remaining
+87 minutes remaining
+86 minutes remaining
+85 minutes remaining
+84 minutes remaining
+83 minutes remaining
+82 minutes remaining
+81 minutes remaining
+80 minutes remaining
+79 minutes remaining
+78 minutes remaining
+77 minutes remaining
+76 minutes remaining
+75 minutes remaining
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2017-01-31 10:31 UTC
+74 minutes remaining
+73 minutes remaining
+72 minutes remaining
+71 minutes remaining
+70 minutes remaining
+69 minutes remaining
+68 minutes remaining
+67 minutes remaining
+66 minutes remaining
+65 minutes remaining
+64 minutes remaining
+63 minutes remaining
+61 minutes remaining
+60 minutes remaining
+Warning: 192.168.0.141 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.1 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.138 giving up on port because retransmission cap hit (2).
+Nmap scan report for 192.168.0.1
+Host is up (0.00076s latency).
+Not shown: 65531 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+23/tcp open  telnet
+53/tcp open  domain
+80/tcp open  http
+
+Nmap scan report for 192.168.0.138
+Host is up (0.0011s latency).
+Not shown: 65534 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for 192.168.0.141
+Host is up (0.00056s latency).
+Skipping host 192.168.0.141 due to host timeout
+58 minutes remaining
+57 minutes remaining
+56 minutes remaining
+55 minutes remaining
+54 minutes remaining
+53 minutes remaining
+52 minutes remaining
+51 minutes remaining
+50 minutes remaining
+49 minutes remaining
+48 minutes remaining
+46 minutes remaining
+45 minutes remaining
+Warning: 192.168.1.1 giving up on port because retransmission cap hit (2).
+Nmap scan report for lede.lan (192.168.1.1)
+Host is up (0.00056s latency).
+Skipping host lede.lan (192.168.1.1) due to host timeout
+44 minutes remaining
+42 minutes remaining
+41 minutes remaining
+40 minutes remaining
+39 minutes remaining
+38 minutes remaining
+37 minutes remaining
+36 minutes remaining
+35 minutes remaining
+34 minutes remaining
+33 minutes remaining
+32 minutes remaining
+31 minutes remaining
+30 minutes remaining
+29 minutes remaining
+28 minutes remaining
+27 minutes remaining
+26 minutes remaining
+25 minutes remaining
+23 minutes remaining
+22 minutes remaining
+21 minutes remaining
+20 minutes remaining
+18 minutes remaining
+17 minutes remaining
+16 minutes remaining
+14 minutes remaining
+13 minutes remaining
+11 minutes remaining
+10 minutes remaining
+9 minutes remaining
+8 minutes remaining
+6 minutes remaining
+4 minutes remaining
+3 minutes remaining
+2 minutes remaining
+1 minutes remaining
+0 minutes remaining
+
+[1485863168]: Test complete
+[1485863168]: Fetching results from router
+
+[1485863169]: Current server time = 1485863169 (difference = 0)
+
+Please reconnect the router to the Internet and run:
+python graph_iperf.py 20170130-stock-lede-no-limit/+edict-on-yesUI-yesScan-wired1
+python graph_vmstat.py 20170130-stock-lede-no-limit/+edict-on-yesUI-yesScan-wired1
+***Starting round 2***
+Disabling EDICT
+Directory 20170130-stock-lede-no-limit/+edict-off-noScan-wired2 did not exist. Creating...
+[1485863176]: Current server time = 1485863176 (difference = 0)
+
+[1485863176]: Writing results to directory 20170130-stock-lede-no-limit/+edict-off-noScan-wired2
+
+[1485863176]: Pushing slave script to router for utilization test
+[1485863177]: Starting CPU and memory utilization logging
+
+[1485863177]: Starting throughput logging (IPv6)
+
+[1485863177]: Running test for 7200 seconds
+119 minutes remaining
+118 minutes remaining
+117 minutes remaining
+116 minutes remaining
+115 minutes remaining
+114 minutes remaining
+113 minutes remaining
+112 minutes remaining
+111 minutes remaining
+110 minutes remaining
+109 minutes remaining
+108 minutes remaining
+107 minutes remaining
+106 minutes remaining
+105 minutes remaining
+104 minutes remaining
+103 minutes remaining
+102 minutes remaining
+101 minutes remaining
+100 minutes remaining
+99 minutes remaining
+97 minutes remaining
+96 minutes remaining
+95 minutes remaining
+94 minutes remaining
+93 minutes remaining
+92 minutes remaining
+91 minutes remaining
+90 minutes remaining
+89 minutes remaining
+88 minutes remaining
+87 minutes remaining
+86 minutes remaining
+85 minutes remaining
+84 minutes remaining
+83 minutes remaining
+82 minutes remaining
+81 minutes remaining
+79 minutes remaining
+78 minutes remaining
+77 minutes remaining
+76 minutes remaining
+75 minutes remaining
+73 minutes remaining
+72 minutes remaining
+71 minutes remaining
+70 minutes remaining
+69 minutes remaining
+68 minutes remaining
+67 minutes remaining
+66 minutes remaining
+65 minutes remaining
+64 minutes remaining
+63 minutes remaining
+62 minutes remaining
+61 minutes remaining
+60 minutes remaining
+59 minutes remaining
+57 minutes remaining
+56 minutes remaining
+55 minutes remaining
+53 minutes remaining
+52 minutes remaining
+50 minutes remaining
+49 minutes remaining
+48 minutes remaining
+47 minutes remaining
+45 minutes remaining
+44 minutes remaining
+43 minutes remaining
+42 minutes remaining
+41 minutes remaining
+40 minutes remaining
+39 minutes remaining
+38 minutes remaining
+37 minutes remaining
+35 minutes remaining
+34 minutes remaining
+33 minutes remaining
+32 minutes remaining
+31 minutes remaining
+30 minutes remaining
+29 minutes remaining
+28 minutes remaining
+27 minutes remaining
+26 minutes remaining
+25 minutes remaining
+24 minutes remaining
+22 minutes remaining
+20 minutes remaining
+19 minutes remaining
+18 minutes remaining
+16 minutes remaining
+15 minutes remaining
+14 minutes remaining
+13 minutes remaining
+12 minutes remaining
+11 minutes remaining
+10 minutes remaining
+9 minutes remaining
+7 minutes remaining
+6 minutes remaining
+5 minutes remaining
+4 minutes remaining
+3 minutes remaining
+2 minutes remaining
+1 minutes remaining
+0 minutes remaining
+
+[1485870377]: Test complete
+[1485870377]: Fetching results from router
+
+[1485870378]: Current server time = 1485870378 (difference = 0)
+
+Please reconnect the router to the Internet and run:
+python graph_iperf.py 20170130-stock-lede-no-limit/+edict-off-noScan-wired2
+python graph_vmstat.py 20170130-stock-lede-no-limit/+edict-off-noScan-wired2
+Directory 20170130-stock-lede-no-limit/+edict-off-yesScan-wired2 did not exist. Creating...
+[1485870384]: Current server time = 1485870384 (difference = 0)
+
+[1485870384]: Writing results to directory 20170130-stock-lede-no-limit/+edict-off-yesScan-wired2
+[1485870384]: Starting port scan
+
+[1485870384]: Pushing slave script to router for utilization test
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2017-01-31 13:46 UTC
+[1485870384]: Starting CPU and memory utilization logging
+
+[1485870384]: Starting throughput logging (IPv6)
+
+[1485870384]: Running test for 7200 seconds
+119 minutes remaining
+118 minutes remaining
+117 minutes remaining
+116 minutes remaining
+115 minutes remaining
+114 minutes remaining
+113 minutes remaining
+112 minutes remaining
+111 minutes remaining
+110 minutes remaining
+109 minutes remaining
+108 minutes remaining
+107 minutes remaining
+106 minutes remaining
+Warning: 192.168.0.141 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.1 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.138 giving up on port because retransmission cap hit (2).
+Nmap scan report for 192.168.0.1
+Host is up (0.00076s latency).
+Not shown: 65531 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+23/tcp open  telnet
+53/tcp open  domain
+80/tcp open  http
+
+Nmap scan report for 192.168.0.138
+Host is up (0.0011s latency).
+Not shown: 65534 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for 192.168.0.141
+Host is up (0.00056s latency).
+Skipping host 192.168.0.141 due to host timeout
+104 minutes remaining
+102 minutes remaining
+101 minutes remaining
+100 minutes remaining
+99 minutes remaining
+98 minutes remaining
+97 minutes remaining
+96 minutes remaining
+95 minutes remaining
+93 minutes remaining
+92 minutes remaining
+91 minutes remaining
+90 minutes remaining
+Warning: 192.168.1.1 giving up on port because retransmission cap hit (2).
+Nmap scan report for lede.lan (192.168.1.1)
+Host is up (0.00058s latency).
+Skipping host lede.lan (192.168.1.1) due to host timeout
+89 minutes remaining
+88 minutes remaining
+87 minutes remaining
+86 minutes remaining
+85 minutes remaining
+84 minutes remaining
+83 minutes remaining
+82 minutes remaining
+81 minutes remaining
+80 minutes remaining
+78 minutes remaining
+77 minutes remaining
+76 minutes remaining
+75 minutes remaining
+74 minutes remaining
+73 minutes remaining
+71 minutes remaining
+70 minutes remaining
+69 minutes remaining
+68 minutes remaining
+67 minutes remaining
+66 minutes remaining
+65 minutes remaining
+64 minutes remaining
+63 minutes remaining
+62 minutes remaining
+61 minutes remaining
+59 minutes remaining
+58 minutes remaining
+57 minutes remaining
+55 minutes remaining
+54 minutes remaining
+53 minutes remaining
+52 minutes remaining
+50 minutes remaining
+49 minutes remaining
+48 minutes remaining
+47 minutes remaining
+45 minutes remaining
+44 minutes remaining
+43 minutes remaining
+42 minutes remaining
+41 minutes remaining
+40 minutes remaining
+39 minutes remaining
+38 minutes remaining
+37 minutes remaining
+36 minutes remaining
+35 minutes remaining
+34 minutes remaining
+33 minutes remaining
+32 minutes remaining
+31 minutes remaining
+29 minutes remaining
+28 minutes remaining
+27 minutes remaining
+26 minutes remaining
+25 minutes remaining
+Warning: 192.168.1.111 giving up on port because retransmission cap hit (2).
+Nmap scan report for odroid64.lan (192.168.1.111)
+Host is up (0.000021s latency).
+Not shown: 65531 closed ports
+PORT      STATE    SERVICE
+22/tcp    open     ssh
+19163/tcp filtered unknown
+37592/tcp filtered unknown
+56435/tcp filtered unknown
+
+Nmap done: 65536 IP addresses (5 hosts up) scanned in 5758.66 seconds
+24 minutes remaining
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2017-01-31 15:22 UTC
+23 minutes remaining
+22 minutes remaining
+21 minutes remaining
+20 minutes remaining
+19 minutes remaining
+18 minutes remaining
+17 minutes remaining
+16 minutes remaining
+15 minutes remaining
+14 minutes remaining
+13 minutes remaining
+12 minutes remaining
+11 minutes remaining
+10 minutes remaining
+9 minutes remaining
+Warning: 192.168.0.141 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.1 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.138 giving up on port because retransmission cap hit (2).
+Nmap scan report for 192.168.0.1
+Host is up (0.00073s latency).
+Not shown: 65531 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+23/tcp open  telnet
+53/tcp open  domain
+80/tcp open  http
+
+Nmap scan report for 192.168.0.138
+Host is up (0.00080s latency).
+Not shown: 65534 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for 192.168.0.141
+Host is up (0.00058s latency).
+Skipping host 192.168.0.141 due to host timeout
+8 minutes remaining
+7 minutes remaining
+6 minutes remaining
+5 minutes remaining
+4 minutes remaining
+2 minutes remaining
+1 minutes remaining
+0 minutes remaining
+
+[1485877584]: Test complete
+[1485877584]: Fetching results from router
+
+[1485877586]: Current server time = 1485877586 (difference = 0)
+
+Please reconnect the router to the Internet and run:
+python graph_iperf.py 20170130-stock-lede-no-limit/+edict-off-yesScan-wired2
+python graph_vmstat.py 20170130-stock-lede-no-limit/+edict-off-yesScan-wired2
+Enabling EDICT (no UI)
+Directory 20170130-stock-lede-no-limit/+edict-on-noUI-noScan-wired2 did not exist. Creating...
+[1485877592]: Current server time = 1485877592 (difference = 0)
+
+[1485877592]: Writing results to directory 20170130-stock-lede-no-limit/+edict-on-noUI-noScan-wired2
+
+[1485877592]: Pushing slave script to router for utilization test
+[1485877593]: Starting CPU and memory utilization logging
+
+[1485877593]: Starting throughput logging (IPv6)
+
+[1485877593]: Running test for 7200 seconds
+119 minutes remaining
+118 minutes remaining
+117 minutes remaining
+116 minutes remaining
+115 minutes remaining
+114 minutes remaining
+113 minutes remaining
+112 minutes remaining
+111 minutes remaining
+110 minutes remaining
+109 minutes remaining
+108 minutes remaining
+107 minutes remaining
+106 minutes remaining
+105 minutes remaining
+104 minutes remaining
+103 minutes remaining
+102 minutes remaining
+101 minutes remaining
+100 minutes remaining
+99 minutes remaining
+97 minutes remaining
+96 minutes remaining
+95 minutes remaining
+94 minutes remaining
+93 minutes remaining
+92 minutes remaining
+91 minutes remaining
+90 minutes remaining
+89 minutes remaining
+88 minutes remaining
+86 minutes remaining
+85 minutes remaining
+84 minutes remaining
+83 minutes remaining
+82 minutes remaining
+81 minutes remaining
+79 minutes remaining
+78 minutes remaining
+77 minutes remaining
+76 minutes remaining
+75 minutes remaining
+73 minutes remaining
+72 minutes remaining
+71 minutes remaining
+70 minutes remaining
+69 minutes remaining
+68 minutes remaining
+67 minutes remaining
+66 minutes remaining
+65 minutes remaining
+64 minutes remaining
+63 minutes remaining
+62 minutes remaining
+61 minutes remaining
+60 minutes remaining
+59 minutes remaining
+58 minutes remaining
+57 minutes remaining
+56 minutes remaining
+55 minutes remaining
+54 minutes remaining
+52 minutes remaining
+51 minutes remaining
+50 minutes remaining
+49 minutes remaining
+47 minutes remaining
+46 minutes remaining
+45 minutes remaining
+44 minutes remaining
+43 minutes remaining
+41 minutes remaining
+40 minutes remaining
+39 minutes remaining
+38 minutes remaining
+37 minutes remaining
+36 minutes remaining
+35 minutes remaining
+33 minutes remaining
+32 minutes remaining
+31 minutes remaining
+30 minutes remaining
+29 minutes remaining
+28 minutes remaining
+27 minutes remaining
+26 minutes remaining
+25 minutes remaining
+24 minutes remaining
+23 minutes remaining
+22 minutes remaining
+21 minutes remaining
+20 minutes remaining
+19 minutes remaining
+18 minutes remaining
+17 minutes remaining
+16 minutes remaining
+15 minutes remaining
+14 minutes remaining
+13 minutes remaining
+12 minutes remaining
+11 minutes remaining
+10 minutes remaining
+8 minutes remaining
+7 minutes remaining
+6 minutes remaining
+5 minutes remaining
+4 minutes remaining
+3 minutes remaining
+2 minutes remaining
+1 minutes remaining
+0 minutes remaining
+
+[1485884793]: Test complete
+[1485884794]: Fetching results from router
+
+[1485884795]: Current server time = 1485884795 (difference = 0)
+
+Please reconnect the router to the Internet and run:
+python graph_iperf.py 20170130-stock-lede-no-limit/+edict-on-noUI-noScan-wired2
+python graph_vmstat.py 20170130-stock-lede-no-limit/+edict-on-noUI-noScan-wired2
+Directory 20170130-stock-lede-no-limit/+edict-on-noUI-yesScan-wired2 did not exist. Creating...
+[1485884801]: Current server time = 1485884800 (difference = -1)
+
+[1485884801]: Writing results to directory 20170130-stock-lede-no-limit/+edict-on-noUI-yesScan-wired2
+[1485884801]: Starting port scan
+
+[1485884801]: Pushing slave script to router for utilization test
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2017-01-31 17:46 UTC
+[1485884801]: Starting CPU and memory utilization logging
+
+[1485884801]: Starting throughput logging (IPv6)
+
+[1485884801]: Running test for 7200 seconds
+119 minutes remaining
+118 minutes remaining
+117 minutes remaining
+116 minutes remaining
+115 minutes remaining
+114 minutes remaining
+113 minutes remaining
+112 minutes remaining
+110 minutes remaining
+109 minutes remaining
+108 minutes remaining
+107 minutes remaining
+106 minutes remaining
+105 minutes remaining
+Warning: 192.168.0.141 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.1 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.138 giving up on port because retransmission cap hit (2).
+Nmap scan report for 192.168.0.1
+Host is up (0.00077s latency).
+Not shown: 65531 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+23/tcp open  telnet
+53/tcp open  domain
+80/tcp open  http
+
+Nmap scan report for 192.168.0.138
+Host is up (0.00081s latency).
+Not shown: 65534 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for 192.168.0.141
+Host is up (0.00056s latency).
+Skipping host 192.168.0.141 due to host timeout
+104 minutes remaining
+103 minutes remaining
+102 minutes remaining
+101 minutes remaining
+100 minutes remaining
+99 minutes remaining
+98 minutes remaining
+97 minutes remaining
+96 minutes remaining
+95 minutes remaining
+94 minutes remaining
+93 minutes remaining
+92 minutes remaining
+91 minutes remaining
+90 minutes remaining
+Warning: 192.168.1.1 giving up on port because retransmission cap hit (2).
+Nmap scan report for lede.lan (192.168.1.1)
+Host is up (0.00057s latency).
+Skipping host lede.lan (192.168.1.1) due to host timeout
+89 minutes remaining
+88 minutes remaining
+87 minutes remaining
+86 minutes remaining
+85 minutes remaining
+84 minutes remaining
+83 minutes remaining
+82 minutes remaining
+81 minutes remaining
+80 minutes remaining
+78 minutes remaining
+77 minutes remaining
+75 minutes remaining
+74 minutes remaining
+73 minutes remaining
+72 minutes remaining
+71 minutes remaining
+70 minutes remaining
+69 minutes remaining
+68 minutes remaining
+67 minutes remaining
+65 minutes remaining
+64 minutes remaining
+63 minutes remaining
+62 minutes remaining
+61 minutes remaining
+60 minutes remaining
+59 minutes remaining
+58 minutes remaining
+57 minutes remaining
+56 minutes remaining
+55 minutes remaining
+54 minutes remaining
+53 minutes remaining
+52 minutes remaining
+51 minutes remaining
+50 minutes remaining
+49 minutes remaining
+48 minutes remaining
+46 minutes remaining
+45 minutes remaining
+44 minutes remaining
+43 minutes remaining
+42 minutes remaining
+41 minutes remaining
+40 minutes remaining
+39 minutes remaining
+38 minutes remaining
+37 minutes remaining
+36 minutes remaining
+35 minutes remaining
+34 minutes remaining
+33 minutes remaining
+32 minutes remaining
+31 minutes remaining
+30 minutes remaining
+29 minutes remaining
+28 minutes remaining
+27 minutes remaining
+26 minutes remaining
+25 minutes remaining
+24 minutes remaining
+Warning: 192.168.1.111 giving up on port because retransmission cap hit (2).
+Nmap scan report for odroid64.lan (192.168.1.111)
+Host is up (0.000020s latency).
+Not shown: 65534 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap done: 65536 IP addresses (5 hosts up) scanned in 5759.60 seconds
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2017-01-31 19:22 UTC
+23 minutes remaining
+22 minutes remaining
+21 minutes remaining
+20 minutes remaining
+19 minutes remaining
+18 minutes remaining
+17 minutes remaining
+16 minutes remaining
+15 minutes remaining
+14 minutes remaining
+13 minutes remaining
+12 minutes remaining
+11 minutes remaining
+10 minutes remaining
+9 minutes remaining
+Warning: 192.168.0.141 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.1 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.138 giving up on port because retransmission cap hit (2).
+Nmap scan report for 192.168.0.1
+Host is up (0.00078s latency).
+Not shown: 65531 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+23/tcp open  telnet
+53/tcp open  domain
+80/tcp open  http
+
+Nmap scan report for 192.168.0.138
+Host is up (0.0011s latency).
+Not shown: 65534 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for 192.168.0.141
+Host is up (0.00056s latency).
+Skipping host 192.168.0.141 due to host timeout
+8 minutes remaining
+7 minutes remaining
+6 minutes remaining
+5 minutes remaining
+4 minutes remaining
+3 minutes remaining
+2 minutes remaining
+0 minutes remaining
+
+[1485892001]: Test complete
+[1485892001]: Fetching results from router
+
+[1485892002]: Current server time = 1485892002 (difference = 0)
+
+Please reconnect the router to the Internet and run:
+python graph_iperf.py 20170130-stock-lede-no-limit/+edict-on-noUI-yesScan-wired2
+python graph_vmstat.py 20170130-stock-lede-no-limit/+edict-on-noUI-yesScan-wired2
+Enabling EDICT UI
+Directory 20170130-stock-lede-no-limit/+edict-on-yesUI-noScan-wired2 did not exist. Creating...
+[1485892008]: Current server time = 1485892008 (difference = 0)
+
+[1485892008]: Writing results to directory 20170130-stock-lede-no-limit/+edict-on-yesUI-noScan-wired2
+
+[1485892008]: Pushing slave script to router for utilization test
+[1485892009]: Starting CPU and memory utilization logging
+
+[1485892009]: Starting throughput logging (IPv6)
+
+[1485892009]: Running test for 7200 seconds
+119 minutes remaining
+118 minutes remaining
+117 minutes remaining
+116 minutes remaining
+115 minutes remaining
+114 minutes remaining
+113 minutes remaining
+112 minutes remaining
+111 minutes remaining
+110 minutes remaining
+109 minutes remaining
+108 minutes remaining
+107 minutes remaining
+106 minutes remaining
+105 minutes remaining
+104 minutes remaining
+103 minutes remaining
+102 minutes remaining
+101 minutes remaining
+100 minutes remaining
+99 minutes remaining
+98 minutes remaining
+97 minutes remaining
+93 minutes remaining
+92 minutes remaining
+91 minutes remaining
+90 minutes remaining
+89 minutes remaining
+88 minutes remaining
+87 minutes remaining
+86 minutes remaining
+85 minutes remaining
+84 minutes remaining
+83 minutes remaining
+82 minutes remaining
+81 minutes remaining
+80 minutes remaining
+78 minutes remaining
+77 minutes remaining
+76 minutes remaining
+74 minutes remaining
+73 minutes remaining
+72 minutes remaining
+71 minutes remaining
+69 minutes remaining
+68 minutes remaining
+66 minutes remaining
+65 minutes remaining
+64 minutes remaining
+63 minutes remaining
+61 minutes remaining
+60 minutes remaining
+59 minutes remaining
+58 minutes remaining
+57 minutes remaining
+56 minutes remaining
+55 minutes remaining
+54 minutes remaining
+53 minutes remaining
+52 minutes remaining
+51 minutes remaining
+50 minutes remaining
+49 minutes remaining
+48 minutes remaining
+47 minutes remaining
+46 minutes remaining
+45 minutes remaining
+44 minutes remaining
+43 minutes remaining
+41 minutes remaining
+40 minutes remaining
+39 minutes remaining
+37 minutes remaining
+36 minutes remaining
+35 minutes remaining
+34 minutes remaining
+33 minutes remaining
+31 minutes remaining
+30 minutes remaining
+29 minutes remaining
+28 minutes remaining
+27 minutes remaining
+26 minutes remaining
+25 minutes remaining
+24 minutes remaining
+21 minutes remaining
+20 minutes remaining
+19 minutes remaining
+18 minutes remaining
+17 minutes remaining
+16 minutes remaining
+14 minutes remaining
+13 minutes remaining
+12 minutes remaining
+11 minutes remaining
+10 minutes remaining
+8 minutes remaining
+7 minutes remaining
+6 minutes remaining
+5 minutes remaining
+4 minutes remaining
+3 minutes remaining
+2 minutes remaining
+1 minutes remaining
+0 minutes remaining
+
+[1485899209]: Test complete
+[1485899209]: Fetching results from router
+
+[1485899211]: Current server time = 1485899211 (difference = 0)
+
+Please reconnect the router to the Internet and run:
+python graph_iperf.py 20170130-stock-lede-no-limit/+edict-on-yesUI-noScan-wired2
+python graph_vmstat.py 20170130-stock-lede-no-limit/+edict-on-yesUI-noScan-wired2
+Directory 20170130-stock-lede-no-limit/+edict-on-yesUI-yesScan-wired2 did not exist. Creating...
+[1485899216]: Current server time = 1485899216 (difference = 0)
+
+[1485899216]: Writing results to directory 20170130-stock-lede-no-limit/+edict-on-yesUI-yesScan-wired2
+[1485899216]: Starting port scan
+
+[1485899216]: Pushing slave script to router for utilization test
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2017-01-31 21:46 UTC
+[1485899217]: Starting CPU and memory utilization logging
+
+[1485899217]: Starting throughput logging (IPv6)
+
+[1485899217]: Running test for 7200 seconds
+119 minutes remaining
+118 minutes remaining
+117 minutes remaining
+116 minutes remaining
+115 minutes remaining
+114 minutes remaining
+113 minutes remaining
+112 minutes remaining
+111 minutes remaining
+109 minutes remaining
+108 minutes remaining
+107 minutes remaining
+106 minutes remaining
+105 minutes remaining
+Warning: 192.168.0.141 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.138 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.1 giving up on port because retransmission cap hit (2).
+Nmap scan report for 192.168.0.1
+Host is up (0.00073s latency).
+Not shown: 65531 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+23/tcp open  telnet
+53/tcp open  domain
+80/tcp open  http
+
+Nmap scan report for 192.168.0.138
+Host is up (0.0011s latency).
+Not shown: 65534 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for 192.168.0.141
+Host is up (0.00056s latency).
+Skipping host 192.168.0.141 due to host timeout
+104 minutes remaining
+103 minutes remaining
+102 minutes remaining
+101 minutes remaining
+100 minutes remaining
+99 minutes remaining
+98 minutes remaining
+97 minutes remaining
+96 minutes remaining
+95 minutes remaining
+94 minutes remaining
+92 minutes remaining
+91 minutes remaining
+90 minutes remaining
+Warning: 192.168.1.1 giving up on port because retransmission cap hit (2).
+Nmap scan report for lede.lan (192.168.1.1)
+Host is up (0.00056s latency).
+Skipping host lede.lan (192.168.1.1) due to host timeout
+89 minutes remaining
+88 minutes remaining
+87 minutes remaining
+86 minutes remaining
+85 minutes remaining
+84 minutes remaining
+83 minutes remaining
+82 minutes remaining
+81 minutes remaining
+80 minutes remaining
+79 minutes remaining
+78 minutes remaining
+77 minutes remaining
+76 minutes remaining
+74 minutes remaining
+72 minutes remaining
+71 minutes remaining
+70 minutes remaining
+69 minutes remaining
+68 minutes remaining
+67 minutes remaining
+66 minutes remaining
+65 minutes remaining
+64 minutes remaining
+63 minutes remaining
+62 minutes remaining
+61 minutes remaining
+60 minutes remaining
+59 minutes remaining
+58 minutes remaining
+57 minutes remaining
+54 minutes remaining
+53 minutes remaining
+52 minutes remaining
+51 minutes remaining
+50 minutes remaining
+49 minutes remaining
+48 minutes remaining
+47 minutes remaining
+46 minutes remaining
+45 minutes remaining
+44 minutes remaining
+43 minutes remaining
+42 minutes remaining
+41 minutes remaining
+40 minutes remaining
+39 minutes remaining
+38 minutes remaining
+37 minutes remaining
+36 minutes remaining
+35 minutes remaining
+34 minutes remaining
+33 minutes remaining
+32 minutes remaining
+31 minutes remaining
+30 minutes remaining
+29 minutes remaining
+28 minutes remaining
+27 minutes remaining
+25 minutes remaining
+Warning: 192.168.1.111 giving up on port because retransmission cap hit (2).
+Nmap scan report for odroid64.lan (192.168.1.111)
+Host is up (0.000020s latency).
+Not shown: 65532 closed ports
+PORT      STATE    SERVICE
+22/tcp    open     ssh
+5439/tcp  filtered unknown
+56285/tcp filtered unknown
+
+Nmap done: 65536 IP addresses (5 hosts up) scanned in 5753.10 seconds
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2017-01-31 23:22 UTC
+24 minutes remaining
+22 minutes remaining
+21 minutes remaining
+20 minutes remaining
+19 minutes remaining
+18 minutes remaining
+17 minutes remaining
+16 minutes remaining
+15 minutes remaining
+14 minutes remaining
+13 minutes remaining
+12 minutes remaining
+11 minutes remaining
+9 minutes remaining
+Warning: 192.168.0.141 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.1 giving up on port because retransmission cap hit (2).
+Warning: 192.168.0.138 giving up on port because retransmission cap hit (2).
+Nmap scan report for 192.168.0.1
+Host is up (0.00074s latency).
+Not shown: 65531 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+23/tcp open  telnet
+53/tcp open  domain
+80/tcp open  http
+
+Nmap scan report for 192.168.0.138
+Host is up (0.00088s latency).
+Not shown: 65534 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for 192.168.0.141
+Host is up (0.00057s latency).
+Skipping host 192.168.0.141 due to host timeout
+8 minutes remaining
+7 minutes remaining
+6 minutes remaining
+5 minutes remaining
+4 minutes remaining
+3 minutes remaining
+2 minutes remaining
+1 minutes remaining
+0 minutes remaining
+
+[1485906417]: Test complete
+[1485906417]: Fetching results from router
+
+[1485906419]: Current server time = 1485906418 (difference = -1)
+
+Please reconnect the router to the Internet and run:
+python graph_iperf.py 20170130-stock-lede-no-limit/+edict-on-yesUI-yesScan-wired2
+python graph_vmstat.py 20170130-stock-lede-no-limit/+edict-on-yesUI-yesScan-wired2
+Disabling EDICT
