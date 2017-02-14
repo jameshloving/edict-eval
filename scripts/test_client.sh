@@ -30,7 +30,7 @@ then
     mkdir $1
 fi
 
-TEST_DURATION=7200
+TEST_DURATION=3600
 TEST_FREQ=1
 
 # check time offset
