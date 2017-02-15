@@ -11,6 +11,8 @@ import argparse
 import plotly.plotly as py
 from plotly.graph_objs import *
 
+from IPython import embed
+
 def clargs():
     parser = argparse.ArgumentParser()
     
@@ -43,9 +45,12 @@ def main():
     with open(infile) as f:
         for line in f:
             if line != '\n' and line.split()[0] == "[SUM]":
-                    y6.append(float(line.split()[line.split().index('Mbits/sec')-1]))
+                    try:
+                        y6.append(float(line.split()[line.split().index('Mbits/sec')-1]))
+                    except:
+                        pass
 
-    x = list(range(1, len(y4)+1))     
+    x = list(range(1, len(y6)+1))     
 
     #y_total = [a + b for a, b in zip(y4, y6)]
 
@@ -75,7 +80,7 @@ def main():
                     xaxis = XAxis(title = 'Time (s)',
                                   dtick = 600),
                     yaxis = YAxis(title = 'Throughput (MBits/s)',
-                                  range = [0,200]))
+                                  range = [0,1000]))
 
     fig = Figure(data=data, layout=layout)
     outfile = sanitized_dir + 'throughput.png'

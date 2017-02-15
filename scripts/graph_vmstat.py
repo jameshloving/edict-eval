@@ -61,7 +61,7 @@ def main():
                     xaxis = XAxis(title = 'Time (s)',
                                   dtick = 600,),
                     yaxis = YAxis(title = 'Free Memory (KB)',
-                                  range = [0,128000]))
+                                  range = [0,500000]))
 
     fig = Figure(data=data, layout=layout)
     outfile = sanitized_dir + 'mem.png'
