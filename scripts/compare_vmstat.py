@@ -141,7 +141,7 @@ def get_pretty_title(var):
 
 def get_yaxis_scale(var):
     if var == 'mem':
-        return [0,100000]
+        return [0,500000]
     if var == 'cpu':
         return [0,100]
 

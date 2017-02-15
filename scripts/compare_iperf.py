@@ -184,9 +184,9 @@ def output_graphs(data, headers, var, outdir):
                                          dtick = 600,
                                          range = [1,3600]),
                           yaxis1 = YAxis(title = 'Network Throughput (Mbits/sec)',
-                                        range = [0,150]),
-                          yaxis2 = YAxis(range = [0,150]),
-                          yaxis3 = YAxis(range = [0,150]),)
+                                        range = [0,1000]),
+                          yaxis2 = YAxis(range = [0,1000]),
+                          yaxis3 = YAxis(range = [0,1000]),)
 
     graph_fig['layout'].update(graph_layout)
 
