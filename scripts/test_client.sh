@@ -14,7 +14,9 @@
 #
 ################################################################################
 
-ROUTER_IP=192.168.1.1
+EDICT_USERNAME=root
+EDICT_IP=192.168.1.1
+EDICT_SSH_KEY=~/.ssh/id_edict
 
 # check for correct number of arguments
 if [ -z "$2" ]
@@ -30,14 +32,12 @@ then
     mkdir $1
 fi
 
-TEST_DURATION=3600
-TEST_FREQ=1
-
 # check time offset
-SERVER_TIME=`ssh -i ~/.ssh/id_edict root@$ROUTER_IP 'date +%s'`
+SERVER_TIME=`ssh -i ~/.ssh/id_edict $EDICT_USERNAME@$EDICT_IP 'date +%s'`
 CLIENT_TIME=`date +%s`
 ((OFFSET_TIME = $SERVER_TIME - $CLIENT_TIME))
 echo "[`date +%s`]: Current server time = $SERVER_TIME (difference = $OFFSET_TIME)"
+
 
 echo ""
 echo "[`date +%s`]: Writing results to directory $1"
@@ -50,12 +50,15 @@ then
     NMAP_PID=$!
 fi
 
+TEST_DURATION=3600
+TEST_FREQ=1
+
 # start CPU/memory utilization logging on router
 echo ""
 echo "[`date +%s`]: Pushing slave script to router for utilization test"
-scp -i ~/.ssh/id_edict test_router.sh root@$ROUTER_IP:~/
+scp -i $EDICT_SSH_KEY test_router.sh $EDICT_USERNAME@$EDICT_IP:~/
 echo "[`date +%s`]: Starting CPU and memory utilization logging"
-ssh -i ~/.ssh/id_edict root@$ROUTER_IP "./test_router.sh $TEST_DURATION $TEST_FREQ > test.out" &
+ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP "./test_router.sh $TEST_FREQ $TEST_DURATION > test.out &"
 
 # start throughput test
 echo ""
@@ -107,11 +110,11 @@ echo ""
 echo "[`date +%s`]: Test complete"
 pkill nmap
 echo "[`date +%s`]: Fetching results from router"
-scp -i ~/.ssh/id_edict root@$ROUTER_IP:~/test.out $1/vmstat.txt
-ssh -i ~/.ssh/id_edict root@$ROUTER_IP 'rm ~/test.out'
+scp -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP:~/test.out $1/vmstat.txt
+ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'rm ~/test.out'
 
 # check time offset again
-SERVER_TIME=`ssh -i ~/.ssh/id_edict root@$ROUTER_IP 'date +%s'`
+SERVER_TIME=`ssh -i ~/.ssh/id_edict $EDICT_USERNAME@$EDICT_IP 'date +%s'`
 CLIENT_TIME=`date +%s`
 ((OFFSET_TIME = $SERVER_TIME - $CLIENT_TIME))
 echo ""

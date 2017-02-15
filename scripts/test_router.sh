@@ -17,7 +17,7 @@
 #
 ################################################################################
 
-# get performance metrics once per $2 seconds for $1 seconds
+# get performance metrics once per $1 seconds for $2 times
 date +%s
 top|head -n 4
-vmstat $2 $1 --unit K --timestamp --one-header
+vmstat $1 $2 --unit K --timestamp --one-header
