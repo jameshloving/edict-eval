@@ -23,26 +23,8 @@ then
     exit 0
 fi
 
-for i in {1..2}
+for i in $MAIN_DIR/*
 do
-    DIR=$MAIN_DIR"edict-off-noScan-wired$i"
-    python3 graph_iperf.py $DIR
-    python3 graph_vmstat.py $DIR
-    DIR=$MAIN_DIR"edict-off-yesScan-wired$i"
-    python3 graph_iperf.py $DIR
-    python3 graph_vmstat.py $DIR
-
-    DIR=$MAIN_DIR"edict-on-noUI-noScan-wired$i"
-    python3 graph_iperf.py $DIR
-    python3 graph_vmstat.py $DIR
-    DIR=$MAIN_DIR"edict-on-noUI-yesScan-wired$i"
-    python3 graph_iperf.py $DIR
-    python3 graph_vmstat.py $DIR
-
-    DIR=$MAIN_DIR"edict-on-yesUI-noScan-wired$i"
-    python3 graph_iperf.py $DIR
-    python3 graph_vmstat.py $DIR
-    DIR=$MAIN_DIR"edict-on-yesUI-yesScan-wired$i"
-    python3 graph_iperf.py $DIR
-    python3 graph_vmstat.py $DIR
+    python3 graph_iperf.py $i
+    python3 graph_vmstat.py $i
 done

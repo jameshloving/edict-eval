@@ -32,42 +32,129 @@ fi
 for i in {1..2}
 do
     echo "***Starting round $i***"
+    TEST_TYPE="-no-limit"
 
-    echo "Disabling EDICT"
+    # EDICT disabled, no portscan
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep bloomd|head -n 1|cut -c 1-5`'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep edict|head -n 1|cut -c 1-5`'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep server.js|head -n 1|cut -c 1-5`'
+    DIR=$MAIN_DIR"edict-off-noScan-wired$TEST_TYPE$i"
+    sleep 5
+    ./test_client.sh $DIR $SERVER_IP
+
+    # EDICT disabled, yes portscan
+    DIR=$MAIN_DIR"edict-off-yesScan-wired$TEST_TYPE$i"
+    sleep 5
+    ./test_client.sh $DIR $SERVER_IP --portscan
+
+    # EDICT enabled, no UI, no portscan
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'rm -f /var/lib/edict/device_log.txt'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'bloomd -f ~/edict/bloomd.conf &'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP '~/edict/edict start edict &'
+    DIR=$MAIN_DIR"edict-on-noUI-noScan-wired$TEST_TYPE$i"
+    sleep 5
+    ./test_client.sh $DIR $SERVER_IP
     ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep bloomd|head -n 1|cut -c 1-5`'
     ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep edict|head -n 1|cut -c 1-5`'
     ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep server.js|head -n 1|cut -c 1-5`'
 
-    DIR=$MAIN_DIR+"edict-off-noScan-wired$i"
-    sleep 5
-    ./test_client.sh $DIR $SERVER_IP
-    DIR=$MAIN_DIR+"edict-off-yesScan-wired$i"
-    sleep 5
-    ./test_client.sh $DIR $SERVER_IP --portscan
-
-    echo "Enabling EDICT (no UI)"
-    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP '~/edict/bloomd -f ~/edict/bloomd.conf &'
-    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP '~/edict/edict &'
-
-    DIR=$MAIN_DIR+"edict-on-noUI-noScan-wired$i"
-    sleep 5
-    ./test_client.sh $DIR $SERVER_IP
-    DIR=$MAIN_DIR+"edict-on-noUI-yesScan-wired$i"
+    # EDICT enabled, no UI, yes portscan
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'rm -f /var/lib/edict/device_log.txt'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'bloomd -f ~/edict/bloomd.conf &'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP '~/edict/edict start edict &'
+    DIR=$MAIN_DIR"edict-on-noUI-yesScan-wired$TEST_TYPE$i"
     sleep 5
     ./test_client.sh $DIR $SERVER_IP --portscan
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep bloomd|head -n 1|cut -c 1-5`'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep edict|head -n 1|cut -c 1-5`'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep server.js|head -n 1|cut -c 1-5`'
 
-    echo "Enabling EDICT UI"
+    # EDICT enabled, yes UI, no portscan
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'rm -f /var/lib/edict/device_log.txt'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'bloomd -f ~/edict/bloomd.conf &'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP '~/edict/edict start edict &'
     ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'node ~/edict/server.js &'
-
-    DIR=$MAIN_DIR+"edict-on-yesUI-noScan-wired$i"
+    DIR=$MAIN_DIR"edict-on-yesUI-noScan-wired$TEST_TYPE$i"
     sleep 5
     ./test_client.sh $DIR $SERVER_IP
-    DIR=$MAIN_DIR+"edict-on-yesUI-yesScan-wired$i"
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep bloomd|head -n 1|cut -c 1-5`'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep edict|head -n 1|cut -c 1-5`'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep server.js|head -n 1|cut -c 1-5`'
+
+    # EDICT enabled, yes UI, yes portscan
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'rm -f /var/lib/edict/device_log.txt'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'bloomd -f ~/edict/bloomd.conf &'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP '~/edict/edict start edict &'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'node ~/edict/server.js &'
+    DIR=$MAIN_DIR"edict-on-yesUI-yesScan-wired$TEST_TYPE$i"
     sleep 5
     ./test_client.sh $DIR $SERVER_IP --portscan
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep bloomd|head -n 1|cut -c 1-5`'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep edict|head -n 1|cut -c 1-5`'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep server.js|head -n 1|cut -c 1-5`'
 done
 
-echo "Disabling EDICT"
-ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep bloomd|head -n 1|cut -c 1-5`'
-ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep edict|head -n 1|cut -c 1-5`'
-ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep server.js|head -n 1|cut -c 1-5`'
+for i in {1..2}
+do
+    echo "***Starting round $i***"
+    TEST_TYPE="-500M-limit"
+
+    # EDICT disabled, no portscan
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep bloomd|head -n 1|cut -c 1-5`'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep edict|head -n 1|cut -c 1-5`'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep server.js|head -n 1|cut -c 1-5`'
+    DIR=$MAIN_DIR"edict-off-noScan-wired$TEST_TYPE$i"
+    sleep 5
+    ./test_client_limited.sh $DIR $SERVER_IP
+
+    # EDICT disabled, yes portscan
+    DIR=$MAIN_DIR"edict-off-yesScan-wired$TEST_TYPE$i"
+    sleep 5
+    ./test_client_limited.sh $DIR $SERVER_IP --portscan
+
+    # EDICT enabled, no UI, no portscan
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'rm -f /var/lib/edict/device_log.txt'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'bloomd -f ~/edict/bloomd.conf &'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP '~/edict/edict start edict &'
+    DIR=$MAIN_DIR"edict-on-noUI-noScan-wired$TEST_TYPE$i"
+    sleep 5
+    ./test_client_limited.sh $DIR $SERVER_IP
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep bloomd|head -n 1|cut -c 1-5`'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep edict|head -n 1|cut -c 1-5`'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep server.js|head -n 1|cut -c 1-5`'
+
+    # EDICT enabled, no UI, yes portscan
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'rm -f /var/lib/edict/device_log.txt'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'bloomd -f ~/edict/bloomd.conf &'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP '~/edict/edict start edict &'
+    DIR=$MAIN_DIR"edict-on-noUI-yesScan-wired$TEST_TYPE$i"
+    sleep 5
+    ./test_client_limited.sh $DIR $SERVER_IP --portscan
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep bloomd|head -n 1|cut -c 1-5`'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep edict|head -n 1|cut -c 1-5`'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep server.js|head -n 1|cut -c 1-5`'
+
+    # EDICT enabled, yes UI, no portscan
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'rm -f /var/lib/edict/device_log.txt'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'bloomd -f ~/edict/bloomd.conf &'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP '~/edict/edict start edict &'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'node ~/edict/server.js &'
+    DIR=$MAIN_DIR"edict-on-yesUI-noScan-wired$TEST_TYPE$i"
+    sleep 5
+    ./test_client_limited.sh $DIR $SERVER_IP
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep bloomd|head -n 1|cut -c 1-5`'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep edict|head -n 1|cut -c 1-5`'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep server.js|head -n 1|cut -c 1-5`'
+
+    # EDICT enabled, yes UI, yes portscan
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'rm -f /var/lib/edict/device_log.txt'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'bloomd -f ~/edict/bloomd.conf &'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP '~/edict/edict start edict &'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'node ~/edict/server.js &'
+    DIR=$MAIN_DIR"edict-on-yesUI-yesScan-wired$TEST_TYPE$i"
+    sleep 5
+    ./test_client_limited.sh $DIR $SERVER_IP --portscan
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep bloomd|head -n 1|cut -c 1-5`'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep edict|head -n 1|cut -c 1-5`'
+    ssh -i $EDICT_SSH_KEY $EDICT_USERNAME@$EDICT_IP 'kill `ps|grep server.js|head -n 1|cut -c 1-5`'
+done
