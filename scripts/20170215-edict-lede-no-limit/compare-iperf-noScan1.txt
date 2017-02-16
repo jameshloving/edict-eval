@@ -1,0 +1,15 @@
+
+
+V6 (Descriptive Statistics):
+                      off-noScan-wired-no-  on-noUI-noScan-wired  on-yesUI-noScan-wire
+Mean:                               937.19                936.79                936.91
+Std Dev:                              5.68                  5.49                  5.64
+
+V6 (Paired T-Tests):
+                      off-noScan-wired-no-  on-noUI-noScan-wired  on-yesUI-noScan-wire
+off-noScan-wired-no-                     -          t=3.05,p=0.0         t=2.14,p=0.03
+on-noUI-noScan-wired         t=-3.05,p=0.0                     -        t=-0.93,p=0.35
+on-yesUI-noScan-wire        t=-2.14,p=0.03         t=0.93,p=0.35                     -
+This is the format of your plot grid:
+[ (1,1) x1,y1 ]  [ (1,2) x2,y2 ]  [ (1,3) x3,y3 ]
+

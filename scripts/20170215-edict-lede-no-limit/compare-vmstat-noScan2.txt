@@ -1,0 +1,30 @@
+
+
+MEM (Descriptive Statistics):
+                      off-noScan-wired-no-  on-noUI-noScan-wired  on-yesUI-noScan-wire
+Mean:                            422122.94             418929.62             420346.03
+Std Dev:                            813.14                  66.2               1066.93
+
+MEM (Paired T-Tests):
+                      off-noScan-wired-no-  on-noUI-noScan-wired  on-yesUI-noScan-wire
+off-noScan-wired-no-                     -        t=225.63,p=0.0         t=88.21,p=0.0
+on-noUI-noScan-wired       t=-225.63,p=0.0                     -        t=-78.12,p=0.0
+on-yesUI-noScan-wire        t=-88.21,p=0.0         t=78.12,p=0.0                     -
+This is the format of your plot grid:
+[ (1,1) x1,y1 ]  [ (1,2) x2,y2 ]  [ (1,3) x3,y3 ]
+
+
+
+CPU (Descriptive Statistics):
+                      off-noScan-wired-no-  on-noUI-noScan-wired  on-yesUI-noScan-wire
+Mean:                                20.85                 21.18                 21.31
+Std Dev:                               2.7                  2.57                  2.58
+
+CPU (Paired T-Tests):
+                      off-noScan-wired-no-  on-noUI-noScan-wired  on-yesUI-noScan-wire
+off-noScan-wired-no-                     -         t=-5.41,p=0.0         t=-7.56,p=0.0
+on-noUI-noScan-wired          t=5.41,p=0.0                     -        t=-2.15,p=0.03
+on-yesUI-noScan-wire          t=7.56,p=0.0         t=2.15,p=0.03                     -
+This is the format of your plot grid:
+[ (1,1) x1,y1 ]  [ (1,2) x2,y2 ]  [ (1,3) x3,y3 ]
+
